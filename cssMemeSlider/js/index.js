@@ -4,6 +4,8 @@ import { arrSlidesInfo } from "./objects.js";
 let lastPositionSlide = 0;
 const allSliderImages = document.querySelector('.slider__container-images').childNodes;
 
+const imagesBlock = document.querySelector('.images')
+
 console.log(textAll);
  textAll.forEach((el, i)=> el.innerText = arrSlidesInfo[i].text)
 
@@ -38,14 +40,21 @@ allSliderPoints.forEach((el) => el.addEventListener('click', (e) => {
 
     console.log(sliderContainer.children.length)
     if(id == 1 ){
-        allSliderImages.forEach((el) => el.style = `left: ${(id - 1) * 100}%`);
+        imagesBlock.style.transform = `translateX(${(id - 1) * 100}%)`;
+        // allSliderImages.forEach((el) => el.style = `margin-left: ${(id - 1) * 100}%`);
+        // allSliderImages.forEach((el) => el.style.transform = `translateX(${(id - 1) * 100}%)`);
         textAll.forEach((el) => el.style = `left: ${(id - 1) * 100}%`);
         console.log(`id === 0`)
     } else if (id == sliderContainer.children.length){
-        allSliderImages.forEach((el) => el.style = `left: -${(id - 1) * 100 + 2}%`);
+        imagesBlock.style.transform = `translateX(-${(id - 1) * 100 + 2}%)`;
+        // allSliderImages.forEach((el) => el.style.transform = `translateX(-${(id - 1) * 100 + 2}%)`);
+        // allSliderImages.forEach((el) => el.style = `margin-left: -${(id - 1) * 100 + 2}%`);
         textAll.forEach((el) => el.style = `left: -${(id - 1) * 100 + 2}%`);
     }  else {
-        allSliderImages.forEach((el) => el.style = `left: -${(id - 1) * 100 + 1}%`);
+        imagesBlock.style.transform = `translateX(-${(id - 1) * 100}%)`;
+        // allSliderImages.forEach((el) => el.style.transform = `translateX(-${(id - 1) * 100}%)`);
+        // allSliderImages.forEach((el) => el.style = `margin-left: -${(id - 1) * 100}%`);
+        // allSliderImages.forEach((el) => el.style = `margin-left: -${(id - 1) * 100 + 1}%`);
         textAll.forEach((el) => el.style = `left: -${(id - 1) * 100 + 1}%`);
     }
 }))

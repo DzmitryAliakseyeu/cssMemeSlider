@@ -8,38 +8,45 @@
 </head>
 <body>
    <div class="container">
-        <div class="container__slider">
-            <div class="slider__container-images">
-                <div class="images">
-                    <img calss="slider-image" src="./img/flying cat.jpg" alt="cat">
-                    <img calss="slider-image" src="./img/pig.svg" alt="pig">
-                    <img calss="slider-image" src="./img/dog.jpg" alt="dog">
-                    <img calss="slider-image" src="./img/woman sit on the crocodile.png" alt="crocodile">
-                </div>
-               
-            </div>
-            <div class="slider__text-and-controller-block">
-                <div class="slider__text">
-                    <div class="text__block">
-                        <p class="text"></p>
-                        <p class="text"></p>
-                        <p class="text"></p>
-                        <p class="text"></p>
-                    </div>
-                   
-                </div>
+        <div class="container__slider">            
+            <div class="slider__block">
                 <div class="slider__controller">
-                    <ul class="controller__block">
-                        <li class="controller__point" id="1"><span class="point__circle" ></span></li>
-                        <li class="controller__point" id="2"><span class="point__circle" ></span></li>
-                        <li class="controller__point" id="3"><span class="point__circle" ></span></li>
-                        <li class="controller__point" id="4"><span class="point__circle" ></span></li>
-                    </ul>
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+
+                    <div class="slider__container-images">
+                        <div class="images">
+                            <img clфss="slider-image" src="./img/flying cat.jpg" alt="cat">
+                            <img clфss="slider-image" src="./img/pig.svg" alt="pig">
+                            <img clфss="slider-image" src="./img/dog.jpg" alt="dog">
+                            <img clфss="slider-image" src="./img/woman sit on the crocodile.png" alt="crocodile">
+                        </div>
+                       
+                    </div>
+
+                    <div class="slider__text-and-controller-block">
+                        <div class="slider__text">
+                            <div class="text__block">
+                                <p class="text">"When the fridge is opening..."</p>
+                                <p class="text">"When you asked to take a photo in a friendly way, but he takes a picture of you like this: “Thank you, now I have a photo for my driver’s license!"</p>
+                                <p class="text">"When you go to an important meeting, but also remain the most stylish: - “I’m not just a dog, I’m a gentledog!”"</p>
+                                <p class="text">"Do you ever saw how crocodile is asking for help?"</p>
+                            </div>
+                           
+                        </div>
+    
+                        <div class="controller__block">
+                            <label class="controller__point" for="slide1"><span></span></label>
+                            <label class="controller__point" for="slide2"><span></span></label>
+                            <label class="controller__point" for="slide3"><span></span></label>
+                            <label class="controller__point" for="slide4"><span></span></label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </div>
    </div>
-    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
